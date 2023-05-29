@@ -1,0 +1,11 @@
+version: '3.3'
+services:
+    run:
+        container_name: samba
+        ports:
+            - '139:139'
+            - '445:445'
+        volumes:
+            - '/media/file_server:/mount'
+        image: dperson/samba
+        restart: always 
